@@ -2,7 +2,7 @@
 <html
   lang="en"
   data-ws-project="c11796b0-cc59-4a27-87a8-d382e4244d97"
-  data-ws-last-published="2026-05-13T14:51:18.051Z"
+  data-ws-last-published="2026-05-14T13:39:09.357Z"
 >
   <head>
     <link
@@ -199,585 +199,384 @@
                 content="width=device-width, initial-scale=1.0"
               />
               <title>BitCarrot Exchange</title>
+
               <style>
-                *,
-                *::before,
-                *::after {
-                  box-sizing: border-box;
-                  margin: 0;
-                  padding: 0;
-                }
-
-                :root {
-                  --bg: #107a0e;
-                  --surface: #ffffff;
-                  --surface-2: #f1f0ec;
-                  --border: rgba(0, 0, 0, 0.1);
-                  --border-md: rgba(0, 0, 0, 0.18);
-                  --text: #1a1a18;
-                  --text-2: #6b6b66;
-                  --text-3: #d39910;
-                  --blue-fill: #185fa5;
-                  --blue-light: #e6f1fb;
-                  --blue-text: #0c447c;
-                  --green-fill: #eaf3de;
-                  --green-border: #97c459;
-                  --green-text: #27500a;
-                  --red-fill: #fcebeb;
-                  --red-border: #f09595;
-                  --red-text: #791f1f;
-                  --radius: 10px;
-                  --radius-lg: 14px;
-                  --mono: "Courier New", Courier, monospace;
-                }
-
-                @media (prefers-color-scheme: dark) {
-                  :root {
-                    --bg: #1a1a18;
-                    --surface: #242422;
-                    --surface-2: #2e2e2b;
-                    --border: rgba(255, 255, 255, 0.1);
-                    --border-md: rgba(255, 255, 255, 0.18);
-                    --text: #d39910;
-                    --text-2: #d39910;
-                    --text-3: #d39910;
-                    --blue-fill: #378add;
-                    --blue-light: #0c2a44;
-                    --blue-text: #b5d4f4;
-                    --green-fill: #17300a;
-                    --green-border: #3b6d11;
-                    --green-text: #c0dd97;
-                    --red-fill: #2e0f0f;
-                    --red-border: #a32d2d;
-                    --red-text: #f7c1c1;
-                  }
-                }
-
                 body {
-                  background: var(--bg);
-                  font-family:
-                    "Segoe UI",
-                    system-ui,
-                    -apple-system,
-                    sans-serif;
-                  color: var(--text);
-                  min-height: 100vh;
-                  display: flex;
-                  align-items: flex-start;
-                  justify-content: center;
-                  padding: 3rem 1rem 4rem;
-                }
-
-                .page {
-                  width: 100%;
-                  max-width: 420px;
-                }
-
-                .wordmark {
-                  text-align: center;
-                  margin-bottom: 2rem;
-                }
-                .wordmark-text {
-                  font-size: 13px;
-                  font-weight: 600;
-                  letter-spacing: 0.12em;
-                  text-transform: uppercase;
-                  color: var(--text-3);
-                }
-
-                .main-card {
-                  background: var(--surface);
-                  border: 0.5px solid var(--border);
-                  border-radius: var(--radius-lg);
-                  padding: 2.25rem 1.75rem;
-                  text-align: center;
-                }
-
-                .icon-wrap {
-                  width: 56px;
-                  height: 56px;
-                  margin: 0 auto 1.25rem;
-                  background: var(--blue-light);
-                  border-radius: var(--radius-lg);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                }
-                .icon-wrap svg {
-                  color: var(--blue-fill);
-                }
-
-                h1 {
-                  font-size: 20px;
-                  font-weight: 600;
-                  color: var(--text);
-                  margin-bottom: 5px;
-                }
-                .subtitle {
-                  font-size: 14px;
-                  color: var(--text-2);
-                  margin-bottom: 1.75rem;
-                  line-height: 1.5;
-                }
-
-                .input-row {
+                  font-family: Arial, sans-serif;
+                  background: #0f172a;
+                  color: #e2e8f0;
                   display: flex;
                   justify-content: center;
-                  gap: 8px;
+                  padding: 40px;
                 }
-                .badge-input {
-                  flex: 2;
-                  padding: 13px 16px;
-                  font-size: 20px;
-                  font-weight: 600;
-                  font-family: var(--mono);
-                  letter-spacing: 0.08em;
-                  text-align: center;
-                  background: var(--surface);
-                  color: var(--text);
-                  border: 0.5px solid var(--border-md);
-                  border-radius: var(--radius);
-                  outline: none;
-                  transition:
-                    border-color 0.15s,
-                    box-shadow 0.15s;
-                  width: 90%;
-                }
-                .badge-input:focus {
-                  border-color: var(--blue-fill);
-                  box-shadow: 0 0 0 3px rgba(55, 138, 221, 0.15);
-                }
-                .badge-input::placeholder {
-                  color: var(--text-3);
-                  font-size: 16px;
-                  font-weight: 400;
-                  letter-spacing: 0;
-                }
-                .badge-input.invalid {
-                  border-color: var(--red-border);
-                  box-shadow: 0 0 0 3px rgba(224, 75, 74, 0.15);
-                }
-                .input-hint {
-                  font-size: 12px;
-                  color: var(--text-3);
-                  margin-top: 7px;
-                  transition: color 0.15s;
-                }
-                .input-hint.error {
-                  color: var(--red-text);
+                .main {
+                  background: #1e293b;
+                  padding: 20px;
+                  border-radius: 12px;
+                  width: 200px;
                 }
 
-                .checkin-btn {
-                  padding: 13px 20px;
-                  font-size: 15px;
-                  font-weight: 600;
-                  background: var(--blue-fill);
-                  color: #e6f1fb;
+                input {
+                  width: 50%;
+                  padding: 10px;
+                  margin-top: 10px;
+                  border-radius: 8px;
                   border: none;
-                  border-radius: var(--radius);
-                  cursor: pointer;
-                  white-space: nowrap;
-                  transition:
-                    background 0.12s,
-                    transform 0.1s;
-                }
-                .checkin-btn:hover {
-                  background: var(--blue-text);
-                }
-                .checkin-btn:active {
-                  transform: scale(0.98);
-                }
-                .checkin-btn:disabled {
-                  background: var(--surface-2);
-                  color: var(--text-3);
-                  cursor: not-allowed;
-                  transform: none;
                 }
 
+                select,
+                button {
+                  width: 100%;
+                  padding: 10px;
+                  margin-top: 10px;
+                  border-radius: 8px;
+                  border: none;
+                }
+                button {
+                  cursor: pointer;
+                  background: #2563eb;
+                  color: white;
+                  font-weight: bold;
+                }
                 .result {
-                  margin-top: 1.25rem;
-                  padding: 11px 14px;
-                  border-radius: var(--radius);
-                  text-align: left;
+                  margin-top: 15px;
+                  padding: 10px;
+                  border-radius: 8px;
                   display: none;
-                  animation: fadeUp 0.18s ease;
-                }
-                @keyframes fadeUp {
-                  from {
-                    opacity: 0;
-                    transform: translateY(5px);
-                  }
-                  to {
-                    opacity: 1;
-                    transform: translateY(0);
-                  }
-                }
-                .result.visible {
-                  display: block;
                 }
                 .result.success {
-                  background: var(--green-fill);
-                  border: 0.5px solid var(--green-border);
+                  background: #064e3b;
                 }
                 .result.error {
-                  background: var(--red-fill);
-                  border: 0.5px solid var(--red-border);
-                }
-                .result-label {
-                  font-size: 11px;
-                  font-weight: 700;
-                  letter-spacing: 0.07em;
-                  text-transform: uppercase;
-                  margin-bottom: 3px;
-                }
-                .result.success .result-label {
-                  color: var(--green-text);
-                }
-                .result.error .result-label {
-                  color: var(--red-text);
-                }
-                .result-msg {
-                  font-size: 14px;
-                  line-height: 1.45;
-                }
-                .result.success .result-msg {
-                  color: var(--green-text);
-                }
-                .result.error .result-msg {
-                  color: var(--red-text);
-                }
-
-                .stats {
-                  display: none;
-                  gap: 10px;
-                  margin-top: 1.5rem;
-                  padding-top: 1.5rem;
-                  border-top: 0.5px solid var(--border);
-                }
-                .stats.visible {
-                  display: flex;
-                }
-                .stat {
-                  flex: 1;
-                  background: var(--surface-2);
-                  border-radius: var(--radius);
-                  padding: 12px 16px;
-                  text-align: center;
-                }
-                .stat-label {
-                  font-size: 11px;
-                  color: var(--text-3);
-                  margin-bottom: 4px;
-                  font-weight: 500;
-                  letter-spacing: 0.04em;
-                }
-                .stat-value {
-                  font-size: 22px;
-                  font-weight: 600;
-                  font-family: var(--mono);
-                  color: var(--text);
+                  background: #7f1d1d;
                 }
               </style>
 
-              <div class="page">
-                <div class="wordmark">
-                  <span class="wordmark-text"
-                    >BSides Harrisburg BitCarrot Exchange</span
-                  >
-                </div>
+              <div class="main">
+                <div
+                  id="badgeLockBanner"
+                  style="
+                    display: none;
+                    margin-bottom: 10px;
+                    color: orange;
+                    font-weight: bold;
+                  "
+                ></div>
+                <h2>BitCarrot Exchange</h2>
 
-                <div class="main-card">
-                  <h1>BitCarrot Exchange</h1>
-                  <p class="subtitle">
-                    Enter your badge number to farm BitCarrot
-                  </p>
+                <input id="badgeInput" placeholder="Badge #" maxlength="3" />
 
-                  <div class="input-row">
-                    <input
-                      class="badge-input"
-                      type="tel"
-                      id="badgeInput"
-                      placeholder="BadgeID"
-                      min="1"
-                      max="500"
-                      autocomplete="off"
-                      spellcheck="false"
-                      oninput="validateBadgeInput(this)"
-                      onkeydown="if(event.key==='Enter') checkIn()"
-                    />
-                  </div>
-                  <br />
+                <select id="sponsorSelect">
+                  <option value="">-- Select Sponsor --</option>
+                  <option value="">-- No Sponsor --</option>
+                  <option value="abnormal">Abnormal</option>
+                  <option value="anecdotes">Anecdotes</option>
+                  <option value="appalachia">APPALACHIA</option>
+                  <option value="arista">Arista</option>
+                  <option value="axonius">Axonius</option>
+                  <option value="big">Business Information Group</option>
+                  <option value="talos">CISCO TALOS</option>
+                  <option value="crowdstrike">CrowdStrike</option>
+                  <option value="ethical">Ethical Intruder</option>
+                  <option value="hig">Higher Information Group</option>
+                  <option value="jfc">JFC Global</option>
+                  <option value="logicgate">Logicgate</option>
+                  <option value="mcnees">McNees</option>
+                  <option value="ndepth">nDepthSecurity</option>
+                  <option value="nozomi">Nozomi Networks</option>
+                  <option value="optiv">Optiv</option>
+                  <option value="reclamere">Reclamere</option>
+                  <option value="securelybuilt">Securely Built</option>
+                  <option value="sumo">SUMO Logic</option>
+                  <option value="symmetrio">Symmetrio</option>
+                  <option value="sysdig">Sysdig</option>
+                  <option value="tenable">Tenable</option>
+                  <option value="threatlocker">ThreatLocker</option>
+                  <option value="wiz">WIZ</option>
+                  <option value="zenity">Zenity Inc.</option>
+                  <option value="cymru">Team Cymru</option>
+                </select>
 
-                  <select id="sponsorSelect" class="badge-input">
-                    <option value="">-- No Sponsor --</option>
-                    <option value="APPALACHIA">APPALACHIA</option>
-                    <option value="Axonius">Axonius</option>
-                    <option value="BIG">Business Information Group</option>
-                    <option value="TALOS">CISCO TALOS</option>
-                    <option value="CrowdStrike">CrowdStrike</option>
-                    <option value="HIG">Higher Information Group</option>
-                    <option value="JFC">JFC Global</option>
-                    <option value="nDEPTH">nDepthSecurity</option>
-                    <option value="Nozomi">Nozomi Networks</option>
-                    <option value="Optiv">Optiv</option>
-                    <option value="Reclamere">Reclamere</option>
-                    <option value="SecurelyBuilt">Securely Built</option>
-                    <option value="SUMO">SUMO Logic</option>
-                    <option value="Symmetrio">Symmetrio</option>
-                    <option value="Sysdig">Sysdig</option>
-                    <option value="Tenable">Tenable</option>
-                    <option value="ThreatLocker">ThreatLocker</option>
-                    <option value="WIZ">WIZ</option>
-                    <option value="Zenity">Zenity Inc.</option>
-                  </select>
-                  <br />
-                  <br />
-                  <div class="input-row">
-                    <button
-                      class="checkin-btn"
-                      id="checkInBtn"
-                      onclick="checkIn()"
-                    >
-                      Farm BitCarrot
-                    </button>
-                  </div>
+                <select id="speakerSelect">
+                  <option value="">-- Select Speaker --</option>
+                  <option value="robbins">Alex Robbins</option>
+                  <option value="dipietro">Allison DiPietro</option>
+                  <option value="mirza">Annas Mirza</option>
+                  <option value="wong">Caroline Wong</option>
+                  <option value="maenner">Chris Maenner</option>
+                  <option value="greyfox">GreyFox</option>
+                  <option value="lloyd">James Lloyd</option>
+                  <option value="garcia">Joel Garcia</option>
+                  <option value="prentice">Joel Prentice</option>
+                  <option value="underkoffler">Kayla Underkoffler</option>
+                  <option value="thomas">Kevin Thomas</option>
+                  <option value="burkey">Leland Burkey</option>
+                  <option value="shriner">Mary Shriner</option>
+                  <option value="cyr">Michael Cyr</option>
+                  <option value="sage">Michael Sage</option>
+                  <option value="eshan">Mohammad Eshan</option>
+                  <option value="puri">Munish Walther-Puri</option>
+                  <option value="baker">Nathalie Baker</option>
+                  <option value="lager">Nathan Lager</option>
+                  <option value="brownridge">Paul Brownridge</option>
+                  <option value="reddy">Pavan Reddy</option>
+                  <option value="cipolone">Peter Cipolone</option>
+                  <option value="davis">Scott Davis</option>
+                  <option value="stryker">Stryker</option>
+                  <option value="tj">TJ Null</option>
+                </select>
 
-                  <div class="result" id="result">
-                    <div class="result-label" id="resultLabel"></div>
-                    <div class="result-msg" id="resultMsg"></div>
-                  </div>
+                <button id="checkInBtn" onclick="checkIn()">
+                  Farm BitCarrot
+                </button>
+                <button onclick="buyCarrot()">Buy 1</button>
+                <button onclick="sellCarrot()">Sell 1</button>
 
-                  <div class="stats" id="stats">
-                    <div class="stat">
-                      <div class="stat-label">Badge</div>
-                      <div class="stat-value" id="statBadge">—</div>
-                    </div>
-                    <div class="stat">
-                      <div class="stat-label">Total BitCarrot</div>
-                      <div class="stat-value" id="statCount">—</div>
-                    </div>
-                  </div>
-                </div>
+                <div id="result" class="result"></div>
               </div>
 
               <script>
-                var SUPABASE_URL = "https://ciadmjaddwdwkcunodrl.supabase.co";
-                var SUPABASE_KEY =
+                const SUPABASE_URL = "https://ciadmjaddwdwkcunodrl.supabase.co";
+                const SUPABASE_KEY =
                   "sb_publishable_e8UZd4jtCgIKvmS01TfxmQ_zJR9ZvZg";
 
-                function validateBadgeInput(el) {
-                  var val = el.value;
-                  var hint = document.getElementById("inputHint");
-                  el.value = val.replace(/[^0-9]/g, "").slice(0, 3);
-                  var num = parseInt(el.value, 10);
-                  if (el.value === "" || (num >= 1 && num <= 500)) {
-                    el.classList.remove("invalid");
-                    if (hint) hint.classList.remove("error");
-                  } else {
-                    el.classList.add("invalid");
-                    if (hint) hint.classList.add("error");
+                const SESSION_ID =
+                  localStorage.getItem("session_id") ||
+                  (() => {
+                    const id = crypto.randomUUID();
+                    localStorage.setItem("session_id", id);
+                    return id;
+                  })();
+                window.addEventListener("DOMContentLoaded", renderBadgeLock);
+                let cooldownTimer = null;
+                // ---------------- Badge Lock ----------------
+                function renderBadgeLock() {
+                  const saved = localStorage.getItem("claimed_badge");
+                  const banner = document.getElementById("badgeLockBanner");
+                  const input = document.getElementById("badgeInput");
+
+                  if (saved) {
+                    banner.style.display = "block";
+                    banner.textContent = "🔒 Badge Locked: " + saved;
+
+                    input.value = saved;
+                    input.disabled = true;
                   }
                 }
+                // ---------------- UI ----------------
 
-                function showResult(type, label, msg) {
-                  var el = document.getElementById("result");
-                  el.className = "result " + type + " visible";
-                  document.getElementById("resultLabel").textContent = label;
-                  document.getElementById("resultMsg").textContent = msg;
+                function showResult(type, msg) {
+                  const el = document.getElementById("result");
+                  el.className = "result " + type;
+                  el.style.display = "block";
+                  el.textContent = msg;
                 }
+
+                // ---------------- MAIN CHECK-IN ----------------
 
                 async function checkIn() {
-                  var sponsorSelect = document.getElementById("sponsorSelect");
-                  var sponsor =
-                    sponsorSelect && sponsorSelect.value
-                      ? sponsorSelect.value
-                      : null;
-                  if (!sponsor) {
-                    showResult(
-                      "error",
-                      "No Sponsor Found",
-                      "Please select a sponsor before farming a BitCarrot.",
-                    );
-                    return;
-                  }
-                  var raw = document.getElementById("badgeInput").value.trim();
-                  if (!raw) {
-                    document.getElementById("badgeInput").focus();
+                  if (cooldownTimer) {
+                    showResult("error", "Cooldown active. Please wait.");
                     return;
                   }
 
-                  var num = parseInt(raw, 10);
-                  if (isNaN(num) || num < 1 || num > 500) {
-                    var hint = document.getElementById("inputHint");
-                    if (hint) {
-                      hint.textContent = "Must be between 001 and 500";
-                      hint.classList.add("error");
-                    }
-                    document
-                      .getElementById("badgeInput")
-                      .classList.add("invalid");
-                    document.getElementById("badgeInput").focus();
+                  const badgeRaw = document
+                    .getElementById("badgeInput")
+                    .value.trim();
+                  const sponsor =
+                    document.getElementById("sponsorSelect").value;
+                  const speaker =
+                    document.getElementById("speakerSelect").value;
+
+                  // XOR validation
+                  if ((sponsor && speaker) || (!sponsor && !speaker)) {
+                    showResult("error", "Select either a sponsor OR speaker");
                     return;
                   }
 
-                  var badge = String(num).padStart(3, "0");
-                  var btn = document.getElementById("checkInBtn");
+                  if (!badgeRaw) {
+                    showResult("error", "Enter a badge number");
+                    return;
+                  }
+
+                  const badge = badgeRaw.padStart(3, "0");
+                  const field = (sponsor || speaker).toLowerCase();
+
+                  const btn = document.getElementById("checkInBtn");
                   btn.disabled = true;
-                  btn.textContent = "Sending Purchase Request to Exchange";
-                  document.getElementById("result").className = "result";
-                  document.getElementById("stats").className = "stats";
+                  btn.textContent = "Processing...";
 
                   try {
-                    // STEP 1: Fetch existing record
-                    var getRes = await fetch(
-                      SUPABASE_URL +
-                        "/rest/v1/badge_checkins?badge_number=eq." +
-                        encodeURIComponent(badge) +
-                        "&select=badge_number,bitcarrot_count" +
-                        (sponsor ? "," + sponsor : ""),
-                      {
-                        headers: {
-                          apikey: SUPABASE_KEY,
-                          Authorization: "Bearer " + SUPABASE_KEY,
-                        },
-                      },
-                    );
-                    if (!getRes.ok)
-                      throw new Error(
-                        "Could not read from database (status " +
-                          getRes.status +
-                          ").",
-                      );
-                    var existing = await getRes.json();
-
-                    // STEP 2: Sponsor check BEFORE any writes
-                    if (sponsor) {
-                      if (!existing.length) {
-                        // Badge doesn't exist yet — no sponsor record possible, OK to continue
-                      } else if (existing[0][sponsor] === undefined) {
-                        showResult(
-                          "error",
-                          "Invalid Sponsor",
-                          "No sponsor farm exists for " + sponsor + ".",
-                        );
-                        return;
-                      } else if (existing[0][sponsor] === 1) {
-                        showResult(
-                          "error",
-                          "Already Harvested",
-                          "You have already harvested the BitCarrot for " +
-                            sponsor +
-                            ". No BitCarrot was grown for badge " +
-                            badge +
-                            ".",
-                        );
-                        return;
-                      }
-                    }
-
-                    // STEP 3: Upsert bitcarrot_count — only reached if sponsor check passed
-                    var newCount =
-                      existing.length > 0 ? existing[0].bitcarrot_count + 1 : 1;
-                    var isNew = existing.length === 0;
-
-                    var upsertRes = await fetch(
-                      SUPABASE_URL +
-                        "/rest/v1/badge_checkins" +
-                        (isNew
-                          ? ""
-                          : "?badge_number=eq." + encodeURIComponent(badge)),
-                      {
-                        method: isNew ? "POST" : "PATCH",
-                        headers: {
-                          apikey: SUPABASE_KEY,
-                          Authorization: "Bearer " + SUPABASE_KEY,
-                          "Content-Type": "application/json",
-                          Prefer: "return=representation",
-                        },
-                        body: JSON.stringify({
-                          badge_number: badge,
-                          bitcarrot_count: newCount,
-                          last_checked_in: new Date().toISOString(),
-                        }),
-                      },
-                    );
-                    if (!upsertRes.ok) {
-                      var errBody = await upsertRes.json().catch(function () {
-                        return {};
-                      });
-                      throw new Error(
-                        errBody.message ||
-                          "Database write failed (status " +
-                            upsertRes.status +
-                            ").",
-                      );
-                    }
-
-                    // STEP 4: Apply sponsor credit if selected
-                    if (sponsor) {
-                      var sponsorUpdate = await fetch(
-                        SUPABASE_URL +
-                          "/rest/v1/badge_checkins?badge_number=eq." +
-                          encodeURIComponent(badge),
+                    // CLAIM ONLY ONCE
+                    if (!localStorage.getItem("claimed_badge")) {
+                      const claimRes = await fetch(
+                        SUPABASE_URL + "/rest/v1/rpc/claim_badge",
                         {
-                          method: "PATCH",
+                          method: "POST",
                           headers: {
                             apikey: SUPABASE_KEY,
                             Authorization: "Bearer " + SUPABASE_KEY,
                             "Content-Type": "application/json",
-                            Prefer: "return=representation",
                           },
-                          body: JSON.stringify({ [sponsor]: 1 }),
+                          body: JSON.stringify({
+                            p_badge: badge,
+                            p_session: SESSION_ID,
+                          }),
                         },
                       );
-                      if (!sponsorUpdate.ok) {
-                        var errBody = await sponsorUpdate
-                          .json()
-                          .catch(function () {
-                            return {};
-                          });
-                        throw new Error(
-                          errBody.message || "Failed to harvest BitCarrot.",
-                        );
+
+                      const claimData = await claimRes.json();
+
+                      if (claimData.error) {
+                        showResult("error", claimData.error);
+                        return;
                       }
-                      showResult(
-                        "success",
-                        "BitCarrot Harvested!",
-                        "BitCarrot from " +
-                          sponsor +
-                          " added to " +
-                          badge +
-                          ". Total: " +
-                          newCount +
-                          ".",
-                      );
-                    } else {
-                      showResult(
-                        "success",
-                        "BitCarrot Harvested!",
-                        "BitCarrot #" +
-                          newCount +
-                          " grown for badge " +
-                          badge +
-                          ".",
-                      );
+
+                      // lock + store
+                      localStorage.setItem("claimed_badge", badge);
+
+                      const input = document.getElementById("badgeInput");
+                      input.value = badge;
+                      input.disabled = true;
+
+                      renderBadgeLock();
                     }
 
-                    document.getElementById("statBadge").textContent = badge;
-                    document.getElementById("statCount").textContent = newCount;
-                    document.getElementById("stats").className =
-                      "stats visible";
-                    document.getElementById("badgeInput").value = "";
-                    document.getElementById("badgeInput").focus();
-                  } catch (err) {
-                    showResult(
-                      "error",
-                      "Harvest Failed",
-                      err.message || "An unexpected error occurred.",
+                    //ACTUAL CHECK-IN
+                    const res = await fetch(
+                      SUPABASE_URL + "/rest/v1/rpc/process_checkin",
+                      {
+                        method: "POST",
+                        headers: {
+                          apikey: SUPABASE_KEY,
+                          Authorization: "Bearer " + SUPABASE_KEY,
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          p_badge: badge,
+                          p_field: field,
+                        }),
+                      },
                     );
+
+                    const data = await res.json();
+
+                    if (!res.ok || data.error) {
+                      let msg = data.error || "Error";
+
+                      if (data.cooldown) {
+                        let remaining = data.cooldown;
+
+                        showResult("error", msg + " (" + remaining + "s)");
+
+                        cooldownTimer = setInterval(() => {
+                          remaining--;
+
+                          if (remaining <= 0) {
+                            clearInterval(cooldownTimer);
+                            cooldownTimer = null;
+
+                            btn.disabled = false;
+                            btn.textContent = "Farm BitCarrot";
+                          } else {
+                            showResult("error", msg + " (" + remaining + "s)");
+                          }
+                        }, 1000);
+
+                        return;
+                      }
+
+                      showResult("error", msg);
+                      return;
+                    }
+
+                    //SUCCESS
+                    showResult(
+                      "success",
+                      "BitCarrot harvested! Total: " + data.new_count,
+                    );
+                  } catch (err) {
+                    console.error("CHECKIN ERROR:", err);
+                    showResult("error", err.message || "Unexpected error");
                   } finally {
-                    btn.disabled = false;
-                    btn.textContent = "Farm BitCarrot";
+                    if (!cooldownTimer) {
+                      btn.disabled = false;
+                      btn.textContent = "Farm BitCarrot";
+                    }
+                  }
+                }
+
+                // ---------------- BUY ----------------
+
+                async function buyCarrot() {
+                  const badge = document
+                    .getElementById("badgeInput")
+                    .value.trim();
+                  if (!badge) return;
+
+                  const res = await fetch(
+                    SUPABASE_URL + "/rest/v1/rpc/buy_bitcarrot",
+                    {
+                      method: "POST",
+                      headers: {
+                        apikey: SUPABASE_KEY,
+                        Authorization: "Bearer " + SUPABASE_KEY,
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify({
+                        p_badge: badge,
+                        p_amount: 1,
+                        p_session: SESSION_ID,
+                      }),
+                    },
+                  );
+
+                  const data = await res.json();
+
+                  if (data.error) {
+                    showResult("error", data.error);
+                  } else {
+                    showResult("success", "Purchased 1 BitCarrot");
+
+                    //REAL MARKET IMPACT
+                    buyVolume += 1;
+                  }
+                }
+
+                // ---------------- SELL ----------------
+
+                async function sellCarrot() {
+                  const badge = document
+                    .getElementById("badgeInput")
+                    .value.trim();
+                  if (!badge) return;
+
+                  const res = await fetch(
+                    SUPABASE_URL + "/rest/v1/rpc/sell_bitcarrot",
+                    {
+                      method: "POST",
+                      headers: {
+                        apikey: SUPABASE_KEY,
+                        Authorization: "Bearer " + SUPABASE_KEY,
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify({
+                        p_badge: badge,
+                        p_amount: 1,
+                        p_session: SESSION_ID,
+                      }),
+                    },
+                  );
+
+                  const data = await res.json();
+
+                  if (data.error) {
+                    showResult("error", data.error);
+                  } else {
+                    showResult("success", "Sold 1 BitCarrot");
+
+                    //REAL MARKET IMPACT
+                    sellVolume += 1;
                   }
                 }
               </script>
@@ -1144,13 +943,13 @@
       {}
     </script>
     <script
-      src="/assets/entries/entry-server-routing.BC7uZr-y.js"
+      src="/assets/entries/entry-server-routing.4ZvoFTsw.js"
       type="module"
       async
     ></script>
     <link
       rel="modulepreload"
-      href="/assets/entries/pages_bitcarrot.BFlg7SzE.js"
+      href="/assets/entries/pages_bitcarrot.BEOhWhhD.js"
       as="script"
       type="text/javascript"
     /><link
