@@ -2,13 +2,13 @@
 <html
   lang="en"
   data-ws-project="c11796b0-cc59-4a27-87a8-d382e4244d97"
-  data-ws-last-published="2026-04-28T16:31:10.298Z"
+  data-ws-last-published="2026-05-20T00:38:57.247Z"
 >
   <head>
     <link
       rel="stylesheet"
       type="text/css"
-      href="/assets/static/app_generated_index-6937cd5a.BB6krJQN.css"
+      href="/assets/static/app_generated_index-6937cd5a.DRblfCBQ.css"
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -59,7 +59,7 @@
                     class="w-box cry9bxc c1c2j90z ct02u4h c10zkoym ct8c5y2 c15cml01 c1qom380 c181tpuq c1vh8w5x c1eaw62m c1bulmrh c1rstvfo c1qrxaqp c2zcut6 c12jt7do cec2gmf"
                   >
                     <a
-                      href="/"
+                      href="/old-home"
                       class="w-link c1blx93c csru8nn c1hz2opz c1c9nyn co9inq6 c18nx7en c13zjl4p c135vpv5 c1qyy4dh ct02u4h cl60rel czukzo6 cb06ied"
                       >Home</a
                     ><a
@@ -67,21 +67,21 @@
                       class="w-link c1blx93c csru8nn c1hz2opz c1c9nyn co9inq6 c18nx7en c13zjl4p c135vpv5 c1qyy4dh ct02u4h cl60rel czukzo6 cb06ied"
                       >Call For Sponsors</a
                     ><a
-                      href="/call-for-papers"
-                      class="w-link c1blx93c csru8nn c1hz2opz c1c9nyn co9inq6 c18nx7en c13zjl4p c135vpv5 c1qyy4dh ct02u4h c1qom380 cl60rel czukzo6 cb06ied"
-                      >Call For Papers</a
-                    ><a
                       href="/speakers"
                       class="w-link c1blx93c csru8nn c1hz2opz c1c9nyn co9inq6 c18nx7en c13zjl4p c135vpv5 c1qyy4dh ct02u4h cl60rel czukzo6 cb06ied"
                       >Speakers and Agenda</a
+                    ><a
+                      href="/red-team-track"
+                      class="w-link c1blx93c csru8nn c1hz2opz c1c9nyn co9inq6 c18nx7en c13zjl4p c135vpv5 c1qyy4dh ct02u4h cl60rel czukzo6 cb06ied"
+                      >Red-Team track</a
                     ><a
                       href="/villages-ctf"
                       class="w-link c1blx93c csru8nn c1hz2opz c1c9nyn co9inq6 c18nx7en c13zjl4p c135vpv5 c1qyy4dh ct02u4h cl60rel czukzo6 cb06ied"
                       >Villages &amp; CTF</a
                     ><a
-                      href="/call-for-volunteers"
+                      href="/workshops"
                       class="w-link c1blx93c csru8nn c1hz2opz c1c9nyn co9inq6 c18nx7en c13zjl4p c135vpv5 c1qyy4dh ct02u4h cl60rel czukzo6 cb06ied"
-                      >Volunteer</a
+                      >workshops</a
                     ><a
                       href="/venue"
                       class="w-link c1blx93c csru8nn c1hz2opz c1c9nyn co9inq6 c18nx7en c13zjl4p c135vpv5 c1qyy4dh ct02u4h cl60rel czukzo6 cb06ied"
@@ -199,585 +199,984 @@
                 content="width=device-width, initial-scale=1.0"
               />
               <title>BitCarrot Exchange</title>
+
               <style>
-                *,
-                *::before,
-                *::after {
-                  box-sizing: border-box;
-                  margin: 0;
-                  padding: 0;
-                }
+                /* =========================================================
+   BITCARROT EXCHANGE v2
+   Binance-Inspired Cyber Exchange Theme
+========================================================= */
 
                 :root {
-                  --bg: #107a0e;
-                  --surface: #ffffff;
-                  --surface-2: #f1f0ec;
-                  --border: rgba(0, 0, 0, 0.1);
-                  --border-md: rgba(0, 0, 0, 0.18);
-                  --text: #1a1a18;
-                  --text-2: #6b6b66;
-                  --text-3: #d39910;
-                  --blue-fill: #185fa5;
-                  --blue-light: #e6f1fb;
-                  --blue-text: #0c447c;
-                  --green-fill: #eaf3de;
-                  --green-border: #97c459;
-                  --green-text: #27500a;
-                  --red-fill: #fcebeb;
-                  --red-border: #f09595;
-                  --red-text: #791f1f;
-                  --radius: 10px;
-                  --radius-lg: 14px;
-                  --mono: "Courier New", Courier, monospace;
+                  --bg-main: #0b0e11;
+                  --bg-card: #181a20;
+                  --bg-soft: #11161d;
+
+                  --border: #2b3139;
+
+                  --text-main: #eaecef;
+                  --text-secondary: #848e9c;
+                  --text-muted: #5e6673;
+
+                  --green: #0ecb81;
+                  --green-dark: #0a7c52;
+
+                  --red: #f6465d;
+
+                  --gold: #f0b90b;
+
+                  --blue: #4ea1ff;
+
+                  --radius: 16px;
                 }
 
-                @media (prefers-color-scheme: dark) {
-                  :root {
-                    --bg: #1a1a18;
-                    --surface: #242422;
-                    --surface-2: #2e2e2b;
-                    --border: rgba(255, 255, 255, 0.1);
-                    --border-md: rgba(255, 255, 255, 0.18);
-                    --text: #d39910;
-                    --text-2: #d39910;
-                    --text-3: #d39910;
-                    --blue-fill: #378add;
-                    --blue-light: #0c2a44;
-                    --blue-text: #b5d4f4;
-                    --green-fill: #17300a;
-                    --green-border: #3b6d11;
-                    --green-text: #c0dd97;
-                    --red-fill: #2e0f0f;
-                    --red-border: #a32d2d;
-                    --red-text: #f7c1c1;
-                  }
-                }
+                /* =========================================================
+   GLOBAL
+========================================================= */
 
                 body {
-                  background: var(--bg);
-                  font-family:
-                    "Segoe UI",
-                    system-ui,
-                    -apple-system,
-                    sans-serif;
-                  color: var(--text);
-                  min-height: 100vh;
+                  margin: 0;
+                  padding: 40px;
+
+                  background: var(--bg-main);
+
+                  color: var(--text-main);
+
+                  font-family: "Inter", sans-serif;
+
                   display: flex;
-                  align-items: flex-start;
                   justify-content: center;
-                  padding: 3rem 1rem 4rem;
                 }
 
-                .page {
+                /* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+                .main {
                   width: 100%;
                   max-width: 420px;
+
+                  background: var(--bg-card);
+
+                  border: 1px solid var(--border);
+
+                  border-radius: 20px;
+
+                  padding: 24px;
+
+                  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
                 }
 
-                .wordmark {
-                  text-align: center;
-                  margin-bottom: 2rem;
-                }
-                .wordmark-text {
-                  font-size: 13px;
-                  font-weight: 600;
-                  letter-spacing: 0.12em;
-                  text-transform: uppercase;
-                  color: var(--text-3);
-                }
+                /* =========================================================
+   INPUTS
+========================================================= */
 
-                .main-card {
-                  background: var(--surface);
-                  border: 0.5px solid var(--border);
-                  border-radius: var(--radius-lg);
-                  padding: 2.25rem 1.75rem;
-                  text-align: center;
-                }
+                input,
+                select {
+                  width: 100%;
 
-                .icon-wrap {
-                  width: 56px;
-                  height: 56px;
-                  margin: 0 auto 1.25rem;
-                  background: var(--blue-light);
-                  border-radius: var(--radius-lg);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                }
-                .icon-wrap svg {
-                  color: var(--blue-fill);
-                }
+                  padding: 12px 14px;
 
-                h1 {
-                  font-size: 20px;
-                  font-weight: 600;
-                  color: var(--text);
-                  margin-bottom: 5px;
-                }
-                .subtitle {
-                  font-size: 14px;
-                  color: var(--text-2);
-                  margin-bottom: 1.75rem;
-                  line-height: 1.5;
-                }
+                  margin-top: 10px;
 
-                .input-row {
-                  display: flex;
-                  justify-content: center;
-                  gap: 8px;
-                }
-                .badge-input {
-                  flex: 2;
-                  padding: 13px 16px;
-                  font-size: 20px;
-                  font-weight: 600;
-                  font-family: var(--mono);
-                  letter-spacing: 0.08em;
-                  text-align: center;
-                  background: var(--surface);
-                  color: var(--text);
-                  border: 0.5px solid var(--border-md);
-                  border-radius: var(--radius);
-                  outline: none;
-                  transition:
-                    border-color 0.15s,
-                    box-shadow 0.15s;
-                  width: 90%;
-                }
-                .badge-input:focus {
-                  border-color: var(--blue-fill);
-                  box-shadow: 0 0 0 3px rgba(55, 138, 221, 0.15);
-                }
-                .badge-input::placeholder {
-                  color: var(--text-3);
-                  font-size: 16px;
-                  font-weight: 400;
-                  letter-spacing: 0;
-                }
-                .badge-input.invalid {
-                  border-color: var(--red-border);
-                  box-shadow: 0 0 0 3px rgba(224, 75, 74, 0.15);
-                }
-                .input-hint {
-                  font-size: 12px;
-                  color: var(--text-3);
-                  margin-top: 7px;
-                  transition: color 0.15s;
-                }
-                .input-hint.error {
-                  color: var(--red-text);
-                }
+                  border-radius: 12px;
 
-                .checkin-btn {
-                  padding: 13px 20px;
+                  border: 1px solid var(--border);
+
+                  background: #11161d;
+
+                  color: var(--text-main);
+
                   font-size: 15px;
-                  font-weight: 600;
-                  background: var(--blue-fill);
-                  color: #e6f1fb;
-                  border: none;
-                  border-radius: var(--radius);
-                  cursor: pointer;
-                  white-space: nowrap;
+
+                  box-sizing: border-box;
+
                   transition:
-                    background 0.12s,
-                    transform 0.1s;
+                    border-color 0.2s ease,
+                    box-shadow 0.2s ease;
                 }
-                .checkin-btn:hover {
-                  background: var(--blue-text);
+
+                input:focus,
+                select:focus {
+                  outline: none;
+
+                  border-color: rgba(240, 185, 11, 0.5);
+
+                  box-shadow: 0 0 0 3px rgba(240, 185, 11, 0.08);
                 }
-                .checkin-btn:active {
-                  transform: scale(0.98);
+
+                /* =========================================================
+   BUTTONS
+========================================================= */
+
+                button {
+                  width: 100%;
+
+                  padding: 12px 14px;
+
+                  margin-top: 10px;
+
+                  border: none;
+
+                  border-radius: 12px;
+
+                  cursor: pointer;
+
+                  font-weight: 700;
+
+                  font-size: 15px;
+
+                  transition:
+                    transform 0.15s ease,
+                    opacity 0.2s ease,
+                    box-shadow 0.2s ease;
                 }
-                .checkin-btn:disabled {
-                  background: var(--surface-2);
-                  color: var(--text-3);
-                  cursor: not-allowed;
-                  transform: none;
+
+                button:hover {
+                  transform: translateY(-1px);
+
+                  opacity: 0.95;
                 }
+
+                /* =========================================================
+   PRIMARY ACTION BUTTONS
+========================================================= */
+
+                button.primary {
+                  background: var(--gold);
+
+                  color: #111;
+                }
+
+                button.primary:hover {
+                  box-shadow: 0 0 18px rgba(240, 185, 11, 0.25);
+                }
+
+                /* =========================================================
+   RESULT BOX
+========================================================= */
 
                 .result {
-                  margin-top: 1.25rem;
-                  padding: 11px 14px;
-                  border-radius: var(--radius);
-                  text-align: left;
+                  margin-top: 16px;
+
+                  padding: 14px;
+
+                  border-radius: 12px;
+
                   display: none;
-                  animation: fadeUp 0.18s ease;
-                }
-                @keyframes fadeUp {
-                  from {
-                    opacity: 0;
-                    transform: translateY(5px);
-                  }
-                  to {
-                    opacity: 1;
-                    transform: translateY(0);
-                  }
-                }
-                .result.visible {
-                  display: block;
-                }
-                .result.success {
-                  background: var(--green-fill);
-                  border: 0.5px solid var(--green-border);
-                }
-                .result.error {
-                  background: var(--red-fill);
-                  border: 0.5px solid var(--red-border);
-                }
-                .result-label {
-                  font-size: 11px;
-                  font-weight: 700;
-                  letter-spacing: 0.07em;
-                  text-transform: uppercase;
-                  margin-bottom: 3px;
-                }
-                .result.success .result-label {
-                  color: var(--green-text);
-                }
-                .result.error .result-label {
-                  color: var(--red-text);
-                }
-                .result-msg {
+
                   font-size: 14px;
-                  line-height: 1.45;
-                }
-                .result.success .result-msg {
-                  color: var(--green-text);
-                }
-                .result.error .result-msg {
-                  color: var(--red-text);
+
+                  font-weight: 600;
                 }
 
-                .stats {
-                  display: none;
-                  gap: 10px;
-                  margin-top: 1.5rem;
-                  padding-top: 1.5rem;
-                  border-top: 0.5px solid var(--border);
+                .result.success {
+                  background: rgba(14, 203, 129, 0.12);
+
+                  border: 1px solid rgba(14, 203, 129, 0.25);
+
+                  color: #8ff0c8;
                 }
-                .stats.visible {
+
+                .result.error {
+                  background: rgba(246, 70, 93, 0.12);
+
+                  border: 1px solid rgba(246, 70, 93, 0.25);
+
+                  color: #ff9ca8;
+                }
+
+                /* =========================================================
+   RANSOM BUTTON
+========================================================= */
+
+                .ransom-btn {
+                  width: 100%;
+
+                  margin-top: 14px;
+
+                  padding: 16px;
+
+                  background: linear-gradient(
+                    145deg,
+                    var(--green),
+                    var(--green-dark)
+                  );
+
+                  border: none;
+
+                  border-radius: 14px;
+
+                  color: white;
+
+                  font-size: 18px;
+
+                  font-weight: 800;
+
+                  letter-spacing: 0.03em;
+
+                  cursor: pointer;
+
+                  transition:
+                    transform 0.15s ease,
+                    box-shadow 0.2s ease;
+                }
+
+                .ransom-btn:hover {
+                  transform: translateY(-2px);
+
+                  box-shadow: 0 0 22px rgba(14, 203, 129, 0.28);
+                }
+
+                /* =========================================================
+   WALLET BOX
+========================================================= */
+
+                .wallet-box {
+                  margin-top: 18px;
+
+                  padding: 16px;
+
+                  background: var(--bg-soft);
+
+                  border: 1px solid rgba(78, 161, 255, 0.2);
+
+                  border-radius: 16px;
+
+                  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+                }
+
+                .wallet-title {
+                  font-size: 12px;
+
+                  font-weight: 700;
+
+                  letter-spacing: 0.08em;
+
+                  text-transform: uppercase;
+
+                  margin-bottom: 10px;
+
+                  color: var(--blue);
+                }
+
+                .wallet-balance,
+                .wallet-value {
+                  font-size: 15px;
+
+                  margin-top: 6px;
+
+                  color: var(--text-main);
+                }
+
+                /* =========================================================
+   TRANSFER CONTROLS
+========================================================= */
+
+                .transfer-controls {
                   display: flex;
+
+                  align-items: center;
+
+                  gap: 10px;
+
+                  margin-top: 14px;
                 }
-                .stat {
-                  flex: 1;
-                  background: var(--surface-2);
-                  border-radius: var(--radius);
-                  padding: 12px 16px;
-                  text-align: center;
-                }
-                .stat-label {
-                  font-size: 11px;
-                  color: var(--text-3);
-                  margin-bottom: 4px;
-                  font-weight: 500;
-                  letter-spacing: 0.04em;
-                }
-                .stat-value {
+
+                .transfer-controls button {
+                  width: 48px;
+                  min-width: 48px;
+                  max-width: 48px;
+
+                  height: 48px;
+
+                  margin-top: 0;
+
                   font-size: 22px;
-                  font-weight: 600;
-                  font-family: var(--mono);
-                  color: var(--text);
+
+                  background: #202630;
+
+                  color: var(--text-main);
+
+                  border: 1px solid var(--border);
+                }
+
+                .transfer-controls button:hover {
+                  border-color: rgba(240, 185, 11, 0.35);
+                }
+
+                .transfer-controls input {
+                  text-align: center;
+
+                  font-size: 20px;
+
+                  font-weight: 700;
+
+                  margin-top: 0;
+                }
+
+                /* =========================================================
+   BADGE INPUT + LOCK ICON
+========================================================= */
+
+                .badge-input-wrap {
+                  position: relative;
+
+                  width: 100%;
+                }
+
+                .badge-input-wrap input {
+                  width: 100%;
+
+                  padding-right: 44px;
+
+                  box-sizing: border-box;
+                }
+
+                .badge-lock-icon {
+                  position: absolute;
+
+                  right: 14px;
+
+                  top: 50%;
+
+                  transform: translateY(-50%);
+
+                  font-size: 18px;
+
+                  color: var(--gold);
+
+                  text-shadow: 0 0 10px rgba(240, 185, 11, 0.45);
+
+                  pointer-events: none;
+                }
+
+                /* =========================================================
+   CTF BOX
+========================================================= */
+
+                .ctf-box {
+                  margin-top: 18px;
+
+                  padding: 16px;
+
+                  border: 1px solid rgba(240, 185, 11, 0.22);
+
+                  border-radius: 16px;
+
+                  background: linear-gradient(
+                    180deg,
+                    rgba(240, 185, 11, 0.08),
+                    rgba(240, 185, 11, 0.03)
+                  );
+
+                  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+                }
+
+                /* =========================================================
+   OPTIONAL HEADERS
+========================================================= */
+
+                .exchange-title {
+                  font-size: 26px;
+
+                  font-weight: 800;
+
+                  margin-bottom: 6px;
+
+                  letter-spacing: 0.03em;
+                }
+
+                .exchange-subtitle {
+                  color: var(--text-secondary);
+
+                  font-size: 14px;
+
+                  margin-bottom: 18px;
+                }
+
+                /* =========================================================
+   LIVE PRICE STATES
+========================================================= */
+
+                .price-up {
+                  color: var(--green);
+
+                  text-shadow: 0 0 10px rgba(14, 203, 129, 0.35);
+                }
+
+                .price-down {
+                  color: var(--red);
+
+                  text-shadow: 0 0 10px rgba(246, 70, 93, 0.35);
+                }
+
+                .price-up::after {
+                  content: " ▲";
+
+                  font-size: 12px;
+                }
+
+                .price-down::after {
+                  content: " ▼";
+
+                  font-size: 12px;
                 }
               </style>
 
-              <div class="page">
-                <div class="wordmark">
-                  <span class="wordmark-text"
-                    >BSides Harrisburg BitCarrot Exchange</span
+              <div class="main">
+                <h2>BitCarrot Exchange</h2>
+
+                <div class="badge-input-wrap">
+                  <input id="badgeInput" placeholder="Badge #" maxlength="3" />
+
+                  <div
+                    id="badgeLockIcon"
+                    class="badge-lock-icon"
+                    style="display: none"
                   >
+                    🔒
+                  </div>
                 </div>
 
-                <div class="main-card">
-                  <h1>BitCarrot Exchange</h1>
-                  <p class="subtitle">
-                    Enter your badge number to farm BitCarrot
-                  </p>
+                <select id="sponsorSelect">
+                  <option value="">-- Select Sponsor --</option>
+                  <option value="abnormal">Abnormal</option>
+                  <option value="anecdotes">Anecdotes</option>
+                  <option value="appalachia">APPALACHIA</option>
+                  <option value="arista">Arista</option>
+                  <option value="axonius">Axonius</option>
+                  <option value="big">Business Information Group</option>
+                  <option value="talos">CISCO TALOS</option>
+                  <option value="crowdstrike">CrowdStrike</option>
+                  <option value="ethical">Ethical Intruder</option>
+                  <option value="hig">Higher Information Group</option>
+                  <option value="jfc">JFC Global</option>
+                  <option value="logicgate">Logicgate</option>
+                  <option value="mcnees">McNees</option>
+                  <option value="ndepth">nDepthSecurity</option>
+                  <option value="nozomi">Nozomi Networks</option>
+                  <option value="optiv">Optiv</option>
+                  <option value="reclamere">Reclamere</option>
+                  <option value="securelybuilt">Securely Built</option>
+                  <option value="sumo">SUMO Logic</option>
+                  <option value="symmetrio">Symmetrio</option>
+                  <option value="sysdig">Sysdig</option>
+                  <option value="tenable">Tenable</option>
+                  <option value="threatlocker">ThreatLocker</option>
+                  <option value="wiz">WIZ</option>
+                  <option value="zenity">Zenity Inc.</option>
+                  <option value="cymru">Team Cymru</option>
+                </select>
 
-                  <div class="input-row">
+                <select id="speakerSelect">
+                  <option value="">-- Select Speaker --</option>
+                  <option value="robbins">Alex Robbins</option>
+                  <option value="dipietro">Allison DiPietro</option>
+                  <option value="mirza">Annas Mirza</option>
+                  <option value="wong">Caroline Wong</option>
+                  <option value="maenner">Chris Maenner</option>
+                  <option value="greyfox">GreyFox</option>
+                  <option value="lloyd">James Lloyd</option>
+                  <option value="garcia">Joel Garcia</option>
+                  <option value="prentice">Joel Prentice</option>
+                  <option value="underkoffler">Kayla Underkoffler</option>
+                  <option value="thomas">Kevin Thomas</option>
+                  <option value="burkey">Leland Burkey</option>
+                  <option value="shriner">Mary Shriner</option>
+                  <option value="cyr">Michael Cyr</option>
+                  <option value="sage">Michael Sage</option>
+                  <option value="eshan">Mohammad Eshan</option>
+                  <option value="puri">Munish Walther-Puri</option>
+                  <option value="baker">Nathalie Baker</option>
+                  <option value="lager">Nathan Lager</option>
+                  <option value="brownridge">Paul Brownridge</option>
+                  <option value="reddy">Pavan Reddy</option>
+                  <option value="cipolone">Peter Cipolone</option>
+                  <option value="davis">Scott Davis</option>
+                  <option value="stryker">Stryker</option>
+                  <option value="tj">TJ Null</option>
+                </select>
+
+                <button id="checkInBtn" onclick="checkIn()">
+                  Farm BitCarrot
+                </button>
+                <div class="transfer-controls">
+                  <button type="button" onclick="adjustTransfer(-1)">-</button>
+
+                  <input
+                    id="transferAmount"
+                    type="number"
+                    value="1"
+                    min="1"
+                    readonly=""
+                  />
+
+                  <button type="button" onclick="adjustTransfer(1)">+</button>
+                </div>
+                <button class="ransom-btn" onclick="depositRansom()">
+                  💰 Transfer to BSides HBG Wallet
+                </button>
+
+                <div id="result" class="result"></div>
+
+                <div id="walletBox" class="wallet-box" style="display: none">
+                  <div class="wallet-title">🥕 Wallet</div>
+
+                  <div class="wallet-balance">
+                    BitCarrots: <span id="walletCoins">0</span>
+                  </div>
+
+                  <div class="wallet-value">
+                    Value: $<span id="walletValue">0.00</span>
+                  </div>
+
+                  <div class="ctf-box">
+                    <div class="ctf-title">🚩 Redeem CTF Flag</div>
+
                     <input
-                      class="badge-input"
-                      type="tel"
-                      id="badgeInput"
-                      placeholder="BadgeID"
-                      min="1"
-                      max="500"
+                      id="ctfFlagInput"
+                      maxlength="5"
+                      autocapitalize="none"
                       autocomplete="off"
                       spellcheck="false"
-                      oninput="validateBadgeInput(this)"
-                      onkeydown="if(event.key==='Enter') checkIn()"
                     />
-                  </div>
-                  <br />
 
-                  <select id="sponsorSelect" class="badge-input">
-                    <option value="">-- No Sponsor --</option>
-                    <option value="APPALACHIA">APPALACHIA</option>
-                    <option value="Axonius">Axonius</option>
-                    <option value="BIG">Business Information Group</option>
-                    <option value="TALOS">CISCO TALOS</option>
-                    <option value="CrowdStrike">CrowdStrike</option>
-                    <option value="HIG">Higher Information Group</option>
-                    <option value="JFC">JFC Global</option>
-                    <option value="nDEPTH">nDepthSecurity</option>
-                    <option value="Nozomi">Nozomi Networks</option>
-                    <option value="Optiv">Optiv</option>
-                    <option value="Reclamere">Reclamere</option>
-                    <option value="SecurelyBuilt">Securely Built</option>
-                    <option value="SUMO">SUMO Logic</option>
-                    <option value="Symmetrio">Symmetrio</option>
-                    <option value="Sysdig">Sysdig</option>
-                    <option value="Tenable">Tenable</option>
-                    <option value="ThreatLocker">ThreatLocker</option>
-                    <option value="WIZ">WIZ</option>
-                    <option value="Zenity">Zenity Inc.</option>
-                  </select>
-                  <br />
-                  <br />
-                  <div class="input-row">
-                    <button
-                      class="checkin-btn"
-                      id="checkInBtn"
-                      onclick="checkIn()"
-                    >
-                      Farm BitCarrot
-                    </button>
-                  </div>
-
-                  <div class="result" id="result">
-                    <div class="result-label" id="resultLabel"></div>
-                    <div class="result-msg" id="resultMsg"></div>
-                  </div>
-
-                  <div class="stats" id="stats">
-                    <div class="stat">
-                      <div class="stat-label">Badge</div>
-                      <div class="stat-value" id="statBadge">—</div>
-                    </div>
-                    <div class="stat">
-                      <div class="stat-label">Total BitCarrot</div>
-                      <div class="stat-value" id="statCount">—</div>
-                    </div>
+                    <button onclick="redeemFlag()">Redeem Flag</button>
                   </div>
                 </div>
               </div>
 
               <script>
-                var SUPABASE_URL = "https://ciadmjaddwdwkcunodrl.supabase.co";
-                var SUPABASE_KEY =
+                const SUPABASE_URL = "https://ciadmjaddwdwkcunodrl.supabase.co";
+                const SUPABASE_KEY =
                   "sb_publishable_e8UZd4jtCgIKvmS01TfxmQ_zJR9ZvZg";
 
-                function validateBadgeInput(el) {
-                  var val = el.value;
-                  var hint = document.getElementById("inputHint");
-                  el.value = val.replace(/[^0-9]/g, "").slice(0, 3);
-                  var num = parseInt(el.value, 10);
-                  if (el.value === "" || (num >= 1 && num <= 500)) {
-                    el.classList.remove("invalid");
-                    if (hint) hint.classList.remove("error");
-                  } else {
-                    el.classList.add("invalid");
-                    if (hint) hint.classList.add("error");
-                  }
-                }
+                const SESSION_ID =
+                  localStorage.getItem("session_id") ||
+                  (() => {
+                    const id = crypto.randomUUID();
+                    localStorage.setItem("session_id", id);
+                    return id;
+                  })();
 
-                function showResult(type, label, msg) {
-                  var el = document.getElementById("result");
-                  el.className = "result " + type + " visible";
-                  document.getElementById("resultLabel").textContent = label;
-                  document.getElementById("resultMsg").textContent = msg;
+                window.addEventListener("DOMContentLoaded", restoreSessionLock);
+                //Globo-gym
+                let lastKnownPrice = 1;
+                let cooldownTimer = null;
+                // ---------------- UI ----------------
+                function showResult(type, msg) {
+                  const el = document.getElementById("result");
+                  el.className = "result " + type;
+                  el.style.display = "block";
+                  el.textContent = msg;
                 }
-
+                // ---------------- MAIN CHECK-IN ----------------
                 async function checkIn() {
-                  var sponsorSelect = document.getElementById("sponsorSelect");
-                  var sponsor =
-                    sponsorSelect && sponsorSelect.value
-                      ? sponsorSelect.value
-                      : null;
-                  if (!sponsor) {
-                    showResult(
-                      "error",
-                      "No Sponsor Found",
-                      "Please select a sponsor before farming a BitCarrot.",
-                    );
-                    return;
-                  }
-                  var raw = document.getElementById("badgeInput").value.trim();
-                  if (!raw) {
-                    document.getElementById("badgeInput").focus();
+                  if (cooldownTimer) {
+                    showResult("error", "Cooldown active. Please wait.");
                     return;
                   }
 
-                  var num = parseInt(raw, 10);
-                  if (isNaN(num) || num < 1 || num > 500) {
-                    var hint = document.getElementById("inputHint");
-                    if (hint) {
-                      hint.textContent = "Must be between 001 and 500";
-                      hint.classList.add("error");
-                    }
-                    document
-                      .getElementById("badgeInput")
-                      .classList.add("invalid");
-                    document.getElementById("badgeInput").focus();
+                  const badgeRaw = document
+                    .getElementById("badgeInput")
+                    .value.trim();
+                  const sponsor =
+                    document.getElementById("sponsorSelect").value;
+                  const speaker =
+                    document.getElementById("speakerSelect").value;
+
+                  // XOR validation
+                  if ((sponsor && speaker) || (!sponsor && !speaker)) {
+                    showResult("error", "Select either a sponsor OR speaker");
                     return;
                   }
 
-                  var badge = String(num).padStart(3, "0");
-                  var btn = document.getElementById("checkInBtn");
+                  if (!badgeRaw) {
+                    showResult("error", "Enter a badge number");
+                    return;
+                  }
+                  const btn = document.getElementById("checkInBtn");
                   btn.disabled = true;
-                  btn.textContent = "Sending Purchase Request to Exchange";
-                  document.getElementById("result").className = "result";
-                  document.getElementById("stats").className = "stats";
+                  btn.textContent = "Processing...";
+                  const badge = badgeRaw.padStart(3, "0");
 
-                  try {
-                    // STEP 1: Fetch existing record
-                    var getRes = await fetch(
-                      SUPABASE_URL +
-                        "/rest/v1/badge_checkins?badge_number=eq." +
-                        encodeURIComponent(badge) +
-                        "&select=badge_number,bitcarrot_count" +
-                        (sponsor ? "," + sponsor : ""),
-                      {
-                        headers: {
-                          apikey: SUPABASE_KEY,
-                          Authorization: "Bearer " + SUPABASE_KEY,
-                        },
+                  // validate backend session
+                  const sessionRes = await fetch(
+                    SUPABASE_URL + "/rest/v1/rpc/validate_badge_session",
+                    {
+                      method: "POST",
+                      headers: {
+                        apikey: SUPABASE_KEY,
+                        Authorization: "Bearer " + SUPABASE_KEY,
+                        "Content-Type": "application/json",
                       },
-                    );
-                    if (!getRes.ok)
-                      throw new Error(
-                        "Could not read from database (status " +
-                          getRes.status +
-                          ").",
-                      );
-                    var existing = await getRes.json();
+                      body: JSON.stringify({
+                        p_badge: badge,
+                        p_session: SESSION_ID,
+                      }),
+                    },
+                  );
 
-                    // STEP 2: Sponsor check BEFORE any writes
-                    if (sponsor) {
-                      if (!existing.length) {
-                        // Badge doesn't exist yet — no sponsor record possible, OK to continue
-                      } else if (existing[0][sponsor] === undefined) {
-                        showResult(
-                          "error",
-                          "Invalid Sponsor",
-                          "No sponsor farm exists for " + sponsor + ".",
-                        );
-                        return;
-                      } else if (existing[0][sponsor] === 1) {
-                        showResult(
-                          "error",
-                          "Already Harvested",
-                          "You have already harvested the BitCarrot for " +
-                            sponsor +
-                            ". No BitCarrot was grown for badge " +
-                            badge +
-                            ".",
-                        );
-                        return;
-                      }
-                    }
+                  const sessionData = await sessionRes.json();
 
-                    // STEP 3: Upsert bitcarrot_count — only reached if sponsor check passed
-                    var newCount =
-                      existing.length > 0 ? existing[0].bitcarrot_count + 1 : 1;
-                    var isNew = existing.length === 0;
+                  if (!sessionData.valid) {
+                    showResult("error", sessionData.error || "session invalid");
 
-                    var upsertRes = await fetch(
-                      SUPABASE_URL +
-                        "/rest/v1/badge_checkins" +
-                        (isNew
-                          ? ""
-                          : "?badge_number=eq." + encodeURIComponent(badge)),
+                    btn.disabled = false;
+                    btn.textContent = "Farm BitCarrot";
+
+                    return;
+                  }
+
+                  //--Update UI for session lock
+                  renderBadgeLock(badge);
+
+                  const field = (sponsor || speaker).toLowerCase();
+                  try {
+                    //ACTUAL CHECK-IN
+                    const res = await fetch(
+                      SUPABASE_URL + "/rest/v1/rpc/process_checkin",
                       {
-                        method: isNew ? "POST" : "PATCH",
+                        method: "POST",
                         headers: {
                           apikey: SUPABASE_KEY,
                           Authorization: "Bearer " + SUPABASE_KEY,
                           "Content-Type": "application/json",
-                          Prefer: "return=representation",
                         },
                         body: JSON.stringify({
-                          badge_number: badge,
-                          bitcarrot_count: newCount,
-                          last_checked_in: new Date().toISOString(),
+                          p_badge: badge,
+                          p_field: field,
                         }),
                       },
                     );
-                    if (!upsertRes.ok) {
-                      var errBody = await upsertRes.json().catch(function () {
-                        return {};
-                      });
-                      throw new Error(
-                        errBody.message ||
-                          "Database write failed (status " +
-                            upsertRes.status +
-                            ").",
-                      );
-                    }
 
-                    // STEP 4: Apply sponsor credit if selected
-                    if (sponsor) {
-                      var sponsorUpdate = await fetch(
-                        SUPABASE_URL +
-                          "/rest/v1/badge_checkins?badge_number=eq." +
-                          encodeURIComponent(badge),
-                        {
-                          method: "PATCH",
-                          headers: {
-                            apikey: SUPABASE_KEY,
-                            Authorization: "Bearer " + SUPABASE_KEY,
-                            "Content-Type": "application/json",
-                            Prefer: "return=representation",
-                          },
-                          body: JSON.stringify({ [sponsor]: 1 }),
-                        },
-                      );
-                      if (!sponsorUpdate.ok) {
-                        var errBody = await sponsorUpdate
-                          .json()
-                          .catch(function () {
-                            return {};
-                          });
-                        throw new Error(
-                          errBody.message || "Failed to harvest BitCarrot.",
-                        );
+                    const data = await res.json();
+
+                    if (!res.ok || data.error) {
+                      let msg = data.error || "Error";
+                      //UI updates
+                      if (data.cooldown) {
+                        let remaining = data.cooldown;
+
+                        showResult("error", msg + " (" + remaining + "s)");
+
+                        cooldownTimer = setInterval(() => {
+                          remaining--;
+
+                          if (remaining <= 0) {
+                            clearInterval(cooldownTimer);
+                            cooldownTimer = null;
+
+                            btn.disabled = false;
+                            btn.textContent = "Farm BitCarrot";
+
+                            // clear cooldown error
+                            const result = document.getElementById("result");
+
+                            result.style.display = "none";
+                          } else {
+                            showResult("error", msg + " (" + remaining + "s)");
+                          }
+                        }, 1000);
+
+                        return;
                       }
-                      showResult(
-                        "success",
-                        "BitCarrot Harvested!",
-                        "BitCarrot from " +
-                          sponsor +
-                          " added to " +
-                          badge +
-                          ". Total: " +
-                          newCount +
-                          ".",
-                      );
-                    } else {
-                      showResult(
-                        "success",
-                        "BitCarrot Harvested!",
-                        "BitCarrot #" +
-                          newCount +
-                          " grown for badge " +
-                          badge +
-                          ".",
-                      );
+
+                      showResult("error", msg);
+                      return;
+                    }
+                    //SUCCESS
+                    showResult(
+                      "success",
+                      "BitCarrot harvested! Total: " + data.new_count,
+                    );
+                    await loadWallet();
+                  } catch (err) {
+                    console.error("CHECKIN ERROR:", err);
+                    showResult("error", err.message || "Unexpected error");
+                  } finally {
+                    if (!cooldownTimer) {
+                      btn.disabled = false;
+                      btn.textContent = "Farm BitCarrot";
+                    }
+                  }
+                }
+                // ---------------- Badge Lock ----------------
+                function renderBadgeLock(badge) {
+                  const input = document.getElementById("badgeInput");
+
+                  if (input) {
+                    input.value = badge;
+
+                    // readonly instead of disabled
+                    input.readOnly = true;
+                  }
+
+                  const lockIcon = document.getElementById("badgeLockIcon");
+
+                  if (lockIcon) {
+                    lockIcon.style.display = "block";
+                  }
+                  loadWallet();
+                }
+                //-badge unlock
+                function clearBadgeLock() {
+                  const input = document.getElementById("badgeInput");
+
+                  if (input) {
+                    input.readOnly = false;
+                  }
+
+                  const lockIcon = document.getElementById("badgeLockIcon");
+
+                  if (lockIcon) {
+                    lockIcon.style.display = "none";
+                  }
+                }
+                //-- Restore session lock
+                async function restoreSessionLock() {
+                  try {
+                    const res = await fetch(
+                      SUPABASE_URL + "/rest/v1/rpc/get_session_badge",
+                      {
+                        method: "POST",
+                        headers: {
+                          apikey: SUPABASE_KEY,
+                          Authorization: "Bearer " + SUPABASE_KEY,
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          p_session: SESSION_ID,
+                        }),
+                      },
+                    );
+
+                    const data = await res.json();
+
+                    if (data.badge) {
+                      renderBadgeLock(data.badge);
+
+                      console.log("Restored badge:", data.badge);
+                    }
+                  } catch (e) {
+                    console.error("RESTORE SESSION:", e);
+                  }
+                }
+                //Deposit Ransom
+                async function depositRansom() {
+                  const badgeRaw = document
+                    .getElementById("badgeInput")
+                    .value.trim();
+
+                  const badge = badgeRaw.padStart(3, "0");
+
+                  if (!badge) {
+                    showResult("error", "No badge entered");
+
+                    return;
+                  }
+
+                  try {
+                    const res = await fetch(
+                      SUPABASE_URL + "/rest/v1/rpc/deposit_to_ransom",
+                      {
+                        method: "POST",
+                        headers: {
+                          apikey: SUPABASE_KEY,
+                          Authorization: "Bearer " + SUPABASE_KEY,
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          p_badge: badge,
+                          p_amount: Number(
+                            document.getElementById("transferAmount").value,
+                          ),
+                        }),
+                      },
+                    );
+                    console.log("STATUS:", res.status);
+                    const data = await res.json();
+                    //testing
+                    <!-- const text = await res.text(); -->
+
+                    <!-- console.log("RANSOM RAW:", text); -->
+
+                    <!-- let data = {}; -->
+
+                    <!-- try{ -->
+                    <!-- data = JSON.parse(text); -->
+                    <!-- }catch(e){ -->
+                    <!-- console.error("PARSE ERROR:", e); -->
+                    <!-- } -->
+                    //testing
+
+                    if (!res.ok || data.error) {
+                      showResult("error", data.error || "Transfer failed");
+
+                      return;
                     }
 
-                    document.getElementById("statBadge").textContent = badge;
-                    document.getElementById("statCount").textContent = newCount;
-                    document.getElementById("stats").className =
-                      "stats visible";
-                    document.getElementById("badgeInput").value = "";
-                    document.getElementById("badgeInput").focus();
-                  } catch (err) {
                     showResult(
-                      "error",
-                      "Harvest Failed",
-                      err.message || "An unexpected error occurred.",
+                      "success",
+                      "💰",
+                      transferAmount,
+                      " BitCarrot transferred to BSidesHBG wallet",
                     );
-                  } finally {
-                    btn.disabled = false;
-                    btn.textContent = "Farm BitCarrot";
+                    await restoreSessionLock();
+                    await loadWallet();
+                  } catch (err) {
+                    console.error(err);
+
+                    showResult("error", "Transfer request failed");
+                  }
+                }
+                //Load Wallet
+                async function loadWallet() {
+                  const badgeInput = document.getElementById("badgeInput");
+
+                  if (!badgeInput) return;
+
+                  const badge = badgeInput.value.trim().padStart(3, "0");
+
+                  if (!badge) return;
+
+                  try {
+                    const res = await fetch(
+                      SUPABASE_URL +
+                        "/rest/v1/badge_checkins?badge_number=eq." +
+                        badge +
+                        "&select=bitcarrot_count",
+                      {
+                        headers: {
+                          apikey: SUPABASE_KEY,
+                          Authorization: "Bearer " + SUPABASE_KEY,
+                        },
+                      },
+                    );
+
+                    const data = await res.json();
+
+                    if (!data.length) return;
+
+                    const coins = Number(data[0].bitcarrot_count || 0);
+
+                    // snapshot market value
+                    const marketRes = await fetch(
+                      SUPABASE_URL +
+                        "/rest/v1/market_state?id=eq.1&select=price",
+                      {
+                        headers: {
+                          apikey: SUPABASE_KEY,
+                          Authorization: "Bearer " + SUPABASE_KEY,
+                        },
+                      },
+                    );
+
+                    const marketData = await marketRes.json();
+                    //testing
+                    console.log("MARKET DATA:", marketData);
+                    //testing
+                    if (Array.isArray(marketData)) {
+                      lastKnownPrice = Number(marketData[0]?.price || 1);
+                    } else {
+                      lastKnownPrice = Number(marketData.price || 1);
+                    }
+
+                    const safeCoins = Number(coins || 0);
+
+                    const safePrice = Number(lastKnownPrice || 0);
+
+                    const value = safeCoins * safePrice;
+                    Number(value).toLocaleString(undefined, {
+                      minimumFractionDigits: 2,
+                      maximumFractionDigits: 2,
+                    });
+
+                    document.getElementById("walletCoins").textContent = coins;
+
+                    document.getElementById("walletValue").textContent = value;
+
+                    document.getElementById("walletBox").style.display =
+                      "block";
+                  } catch (e) {
+                    console.error("WALLET LOAD:", e);
+                  }
+                }
+                //Transfer Adjust
+                function adjustTransfer(delta) {
+                  const input = document.getElementById("transferAmount");
+
+                  let value = Number(input.value || 1);
+
+                  value += delta;
+
+                  // prevent negatives / zero
+                  if (value < 1) {
+                    value = 1;
+                  }
+
+                  // optional max safeguard
+                  if (value > 999) {
+                    value = 999;
+                  }
+
+                  input.value = value;
+                }
+                //CTF flags
+                async function redeemFlag() {
+                  const badge = document
+                    .getElementById("badgeInput")
+                    .value.trim()
+                    .padStart(3, "0");
+
+                  const flag = document
+                    .getElementById("ctfFlagInput")
+                    .value.trim();
+
+                  if (!flag) {
+                    showResult("error", "Enter a flag");
+
+                    return;
+                  }
+
+                  try {
+                    const res = await fetch(
+                      SUPABASE_URL + "/rest/v1/rpc/redeem_ctf_flag",
+                      {
+                        method: "POST",
+                        headers: {
+                          apikey: SUPABASE_KEY,
+                          Authorization: "Bearer " + SUPABASE_KEY,
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          p_badge: badge,
+                          p_flag: flag,
+                        }),
+                      },
+                    );
+
+                    const data = await res.json();
+
+                    if (!data.success) {
+                      showResult("error", data.error || "Flag failed");
+
+                      return;
+                    }
+
+                    showResult(
+                      "success",
+                      data.flag_name +
+                        " has awarded you an extra BitCarrot for capturing their flag!",
+                    );
+
+                    await loadWallet();
+
+                    document.getElementById("ctfFlagInput").value = "";
+                  } catch (err) {
+                    console.error(err);
+
+                    showResult("error", "Flag redemption failed");
                   }
                 }
               </script>
@@ -1144,13 +1543,13 @@
       {}
     </script>
     <script
-      src="/assets/entries/entry-server-routing.BgnToE5E.js"
+      src="/assets/entries/entry-server-routing.CEGlvLY5.js"
       type="module"
       async
     ></script>
     <link
       rel="modulepreload"
-      href="/assets/entries/pages_bitcarrot.TVP1_rh8.js"
+      href="/assets/entries/pages_bitcarrot.DYR3f3SR.js"
       as="script"
       type="text/javascript"
     /><link
