@@ -2,7 +2,7 @@
 <html
   lang="en"
   data-ws-project="c11796b0-cc59-4a27-87a8-d382e4244d97"
-  data-ws-last-published="2026-05-27T00:12:19.743Z"
+  data-ws-last-published="2026-05-28T01:03:14.569Z"
 >
   <head>
     <link
@@ -595,6 +595,48 @@
                 }
 
                 /* =========================================================
+   CAPTURED CTF FLAGS
+========================================================= */
+
+                .captured-flags-label {
+                  font-size: 12px;
+
+                  font-weight: 700;
+
+                  letter-spacing: 0.08em;
+
+                  text-transform: uppercase;
+
+                  margin-top: 14px;
+
+                  margin-bottom: 8px;
+
+                  color: var(--gold);
+                }
+
+                .flag-chip {
+                  background: rgba(240, 185, 11, 0.1);
+
+                  border: 1px solid rgba(240, 185, 11, 0.3);
+
+                  border-radius: 8px;
+
+                  padding: 6px 10px;
+
+                  margin-top: 6px;
+
+                  font-size: 13px;
+
+                  font-weight: 700;
+
+                  color: var(--gold);
+
+                  letter-spacing: 0.05em;
+
+                  font-family: "Courier New", Courier, monospace;
+                }
+
+                /* =========================================================
    LIVE PRICE STATES
 ========================================================= */
 
@@ -724,7 +766,7 @@
 
                 <div id="result" class="result"></div>
 
-                <div id="walletBox" class="wallet-box" style="display: none">
+                <div id="walletBox" class="wallet-box">
                   <div class="wallet-title">🥕 Wallet</div>
 
                   <div class="wallet-balance">
@@ -733,6 +775,13 @@
 
                   <div class="wallet-value">
                     Value: $<span id="walletValue">0.00</span>
+                  </div>
+
+                  <div id="capturedFlagsSection" style="display: none">
+                    <div class="captured-flags-label">
+                      🚩 Captured CTF Flags
+                    </div>
+                    <div id="capturedFlagsList"></div>
                   </div>
 
                   <div class="ctf-box">
@@ -1029,16 +1078,18 @@
 
                   if (!badgeInput) return;
 
-                  const badge = badgeInput.value.trim().padStart(3, "0");
+                  const badgeRaw = badgeInput.value.trim();
 
-                  if (!badge) return;
+                  if (!badgeRaw) return;
+
+                  const badge = badgeRaw.padStart(3, "0");
 
                   try {
                     const res = await fetch(
                       SUPABASE_URL +
                         "/rest/v1/badge_checkins?badge_number=eq." +
                         badge +
-                        "&select=bitcarrot_count",
+                        "&select=bitcarrot_count,claimed_flags",
                       {
                         headers: {
                           apikey: SUPABASE_KEY,
@@ -1053,6 +1104,10 @@
 
                     const coins = Number(data[0].bitcarrot_count || 0);
 
+                    const claimedFlags = Array.isArray(data[0].claimed_flags)
+                      ? data[0].claimed_flags
+                      : [];
+
                     // snapshot market value
                     const marketRes = await fetch(
                       SUPABASE_URL +
@@ -1066,20 +1121,14 @@
                     );
 
                     const marketData = await marketRes.json();
-                    //testing
-                    console.log("MARKET DATA:", marketData);
-                    //testing
+
                     if (Array.isArray(marketData)) {
                       lastKnownPrice = Number(marketData[0]?.price || 1);
                     } else {
                       lastKnownPrice = Number(marketData.price || 1);
                     }
 
-                    const safeCoins = Number(coins || 0);
-
-                    const safePrice = Number(lastKnownPrice || 0);
-
-                    const value = Number(safeCoins * safePrice).toLocaleString(
+                    const value = Number(coins * lastKnownPrice).toLocaleString(
                       undefined,
                       {
                         minimumFractionDigits: 2,
@@ -1091,8 +1140,51 @@
 
                     document.getElementById("walletValue").textContent = value;
 
-                    document.getElementById("walletBox").style.display =
-                      "block";
+                    // render captured CTF flags
+                    const flagsSection = document.getElementById(
+                      "capturedFlagsSection",
+                    );
+
+                    const flagsList =
+                      document.getElementById("capturedFlagsList");
+
+                    if (claimedFlags.length > 0) {
+                      // RPC bypasses RLS — safe to call with anon key
+                      const flagRes = await fetch(
+                        SUPABASE_URL + "/rest/v1/rpc/get_claimed_flag_values",
+                        {
+                          method: "POST",
+                          headers: {
+                            apikey: SUPABASE_KEY,
+                            Authorization: "Bearer " + SUPABASE_KEY,
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({ p_badge: badge }),
+                        },
+                      );
+
+                      const flagData = await flagRes.json();
+
+                      // normalise: RPC returns array; guard for edge cases
+                      const flagValues = Array.isArray(flagData)
+                        ? flagData
+                        : flagData
+                          ? [flagData]
+                          : [];
+
+                      flagsList.innerHTML = "";
+
+                      flagValues.forEach((fv) => {
+                        const chip = document.createElement("div");
+                        chip.className = "flag-chip";
+                        chip.textContent = "CTF FLAG VALUE: " + fv;
+                        flagsList.appendChild(chip);
+                      });
+
+                      flagsSection.style.display = "block";
+                    } else {
+                      flagsSection.style.display = "none";
+                    }
                   } catch (e) {
                     console.error("WALLET LOAD:", e);
                   }
@@ -1159,11 +1251,7 @@
                       return;
                     }
 
-                    showResult(
-                      "success",
-                      data.flag_name +
-                        " has awarded you an extra BitCarrot for capturing their flag!",
-                    );
+                    showResult("success", "CTF FLAG VALUE: " + data.flag_name);
 
                     await loadWallet();
 
@@ -1538,13 +1626,13 @@
       {}
     </script>
     <script
-      src="/assets/entries/entry-server-routing.Ef5ELRAu.js"
+      src="/assets/entries/entry-server-routing.DKAESV7v.js"
       type="module"
       async
     ></script>
     <link
       rel="modulepreload"
-      href="/assets/entries/pages_bitcarrot.Du8_ON_H.js"
+      href="/assets/entries/pages_bitcarrot.6CmMsyLn.js"
       as="script"
       type="text/javascript"
     /><link
